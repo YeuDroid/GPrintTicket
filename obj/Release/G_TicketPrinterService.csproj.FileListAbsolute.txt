@@ -1,0 +1,16 @@
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\bin\Release\LiteDB.dll
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\bin\Release\Newtonsoft.Json.dll
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\bin\Release\LiteDB.xml
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\bin\Release\Newtonsoft.Json.xml
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\obj\Release\G_TicketPrinterService.initialSplash.resources
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\obj\Release\G_TicketPrinterService.MainForm.resources
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\obj\Release\G_TicketPrinterService.Properties.Resources.resources
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\obj\Release\G_TicketPrinterService.Test.resources
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\obj\Release\G_TicketPrinterService.csproj.GenerateResource.Cache
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\obj\Release\G_TicketPrinterService.csproj.CoreCompileInputs.cache
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\bin\Release\PrinterService.exe.config
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\bin\Release\PrinterService.exe
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\bin\Release\PrinterService.pdb
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\obj\Release\G_TicketPrinterService.csprojResolveAssemblyReference.cache
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\obj\Release\PrinterService.exe
+C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\obj\Release\PrinterService.pdb
