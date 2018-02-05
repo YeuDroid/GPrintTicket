@@ -33,8 +33,8 @@ namespace G_TicketPrinterService
                 netconfig = new NetworkConfiguration();
                 netconfig.Id = 1;
                 netconfig.METOD_RESOLVED = "IP";
-                netconfig.IP = "192.168.1.84";
-                netconfig.PORT = 12347;
+                netconfig.IP = "192.168.1.85";
+                netconfig.PORT = 5555;
                 MainForm.db.GetCollection<NetworkConfiguration>("network_config").Insert(netconfig);
             }
 
