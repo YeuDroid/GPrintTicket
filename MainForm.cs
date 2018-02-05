@@ -37,10 +37,6 @@ namespace G_TicketPrinterService
         {
             new initialSplash().ShowDialog();
         }
-        private void aceraDeYeuDevelopLabsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new acerca_de().ShowDialog();
-        }
         private void verTicketsImpresosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new ver_impresion_t().ShowDialog();

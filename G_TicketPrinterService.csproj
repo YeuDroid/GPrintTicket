@@ -50,7 +50,8 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>rubber-duck_icon-icons.com_55299.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -84,12 +85,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="acerca_de.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="acerca_de.Designer.cs">
-      <DependentUpon>acerca_de.cs</DependentUpon>
-    </Compile>
     <Compile Include="initialSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,9 +116,6 @@
     <Compile Include="ver_impresion_t.Designer.cs">
       <DependentUpon>ver_impresion_t.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="acerca_de.resx">
-      <DependentUpon>acerca_de.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="initialSplash.resx">
       <DependentUpon>initialSplash.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,7 +156,6 @@
     <None Include="Resources\cashier_icon-icons.com_53629.png" />
     <None Include="Resources\shoppaymentorderbuy-11_icon-icons.com_73850.png" />
     <None Include="Resources\Alarm-Tick-icon.png" />
-    <Content Include="rubber-duck_icon-icons.com_55299.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
