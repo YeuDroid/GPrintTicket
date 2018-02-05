@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.Net.Sockets;
 using System.Net;
@@ -30,28 +31,44 @@ namespace G_TicketPrinterService
             while (true)
             {
                 rawJsonCatched = ScanForValue();
-                if(rawJsonCatched[0].ToString() == "@")
+                //MessageBox.Show(rawJsonCatched);
+                
+                if (rawJsonCatched == "NULL")
                 {
-                    System.Windows.Forms.MessageBox.Show(rawJsonCatched);
+                    MessageBox.Show("NULL RECEIVER #123");
+                    continue;
+                }
+                if (rawJsonCatched[0].ToString() == "@")
+                {
+                    MessageBox.Show(rawJsonCatched);
                 }
                 else
                 {
                     var dataTicket = JsonConvert.DeserializeObject<Ticket>(rawJsonCatched);
                     PrinterModule printer = new PrinterModule();
                     printer.PrintTicket(dataTicket);
-                    System.Windows.Forms.MessageBox.Show("TICKET: " + dataTicket.Identifiquer.ToString() + " IMPRESO");
+                    MessageBox.Show("TICKET: " + dataTicket.Identifiquer.ToString() + " IMPRESO");    
                 }
+                
             }
         }
         private String ScanForValue()
         {
+
             TcpListener listener = new TcpListener(IPAddress.Any, this.Configuration.PORT);
             listener.Start();
             string msg = "NULL";
-            using (TcpClient c = listener.AcceptTcpClient())
-            using (NetworkStream n = c.GetStream())
+            using (var c = listener.AcceptSocket())
             {
-                msg = new BinaryReader(n).ReadString();
+                byte[] buffer = new byte[1024];
+                int iRx = c.Receive(buffer);
+                char[] chars = new char[iRx];
+
+                System.Text.Decoder d = System.Text.Encoding.ASCII.GetDecoder();
+                int charLen = d.GetChars(buffer, 0, iRx, chars, 0);
+                msg = new System.String(chars);
+                c.Send(System.Text.Encoding.ASCII.GetBytes("OK-R"));
+                
             }
             listener.Stop();
             return msg;

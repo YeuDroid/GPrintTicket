@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -75,6 +77,7 @@ namespace G_TicketPrinterService
             tik.Identifiquer = 266355353;
             tik.SubTotal = 99;
 
+            Clipboard.SetText(Newtonsoft.Json.JsonConvert.SerializeObject(tik));
             print.PrintTicket(tik);
 
            
@@ -84,6 +87,35 @@ namespace G_TicketPrinterService
         {
             double t = 2.1566567;
             MessageBox.Show(t.ToString("N2"));
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            using (TcpClient client = new TcpClient("192.168.1.85", 5555))
+            using (NetworkStream n = client.GetStream())
+            {
+                BinaryWriter w = new BinaryWriter(n);
+                w.Write(System.Text.ASCIIEncoding.ASCII.GetBytes("HOLLO"));
+                w.Flush();
+                //Console.WriteLine(new BinaryReader(n).ReadString());
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var sendSock = new System.Net.Sockets.Socket(SocketType.Stream,ProtocolType.Tcp);
+            using (TcpClient client = new TcpClient("192.168.1.75", 5555))
+            {
+                //client.Client.Send(System.Text.ASCIIEncoding.ASCII.GetBytes("HOLA MUNDO"));
+                using (NetworkStream n = client.GetStream())
+                {
+
+                    BinaryWriter w = new BinaryWriter(n);
+                    w.Write("C#");
+                    w.Flush();
+                    //Console.WriteLine(new BinaryReader(n).ReadString());
+                }
+            }
         }
     }
 }
