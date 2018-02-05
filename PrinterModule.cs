@@ -65,5 +65,19 @@ namespace G_TicketPrinterService
             ticket.PrintTicket(this.Configuration.PrinterName);
 
         } 
+        public static List<String> getPrinterInstalled()
+        {
+            List<String> printersInstalled = new List<string>();
+            foreach(var printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
+            {
+                printersInstalled.Add(printer.ToString());
+            }
+            return printersInstalled;
+        }
+        public void ChangePrinter(string printname)
+        {
+            this.Configuration.PrinterName = printname;
+            PrinterConfiguration.SaveConfigurationChanges(this.Configuration);
+        }
     }
 }

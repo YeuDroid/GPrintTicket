@@ -49,5 +49,31 @@ namespace G_TicketPrinterService
         {
             new Test().ShowDialog();
         }
+        private void SelectPrinter_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            var config = PrinterConfiguration.GetConfiguration();
+            config.PrinterName = e.ClickedItem.Text;
+            PrinterConfiguration.SaveConfigurationChanges(config);
+        }
+
+        private void MenuOptionsBar_Opening(object sender, CancelEventArgs e)
+        {
+            this.SelectPrinter.Items.Clear();
+            Image img = global::G_TicketPrinterService.Properties.Resources.printer_6029;
+            Image imgSelected = global::G_TicketPrinterService.Properties.Resources.Alarm_Tick_icon;
+
+            var config = PrinterConfiguration.GetConfiguration();
+            foreach (var printer in PrinterModule.getPrinterInstalled())
+            {
+                if (printer == config.PrinterName)
+                {
+                    this.SelectPrinter.Items.Add(printer, imgSelected);
+                }
+                else
+                { this.SelectPrinter.Items.Add(printer, img); }
+
+            }
+            this.SelectPrinter.Items.Add("UNSELECTED", img);
+        }
     }
 }

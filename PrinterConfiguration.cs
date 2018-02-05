@@ -11,7 +11,12 @@ namespace G_TicketPrinterService
     {
         public string PrinterName { get; set; }
         public int Id { get; set; }
-
+        
+        public static PrinterConfiguration SaveConfigurationChanges(PrinterConfiguration config)
+        {
+            System.IO.File.WriteAllText("print_config.txt", JsonConvert.SerializeObject(config));
+            return config;
+        }
         public static PrinterConfiguration GetConfiguration()
         {
             PrinterConfiguration config = null;
@@ -25,7 +30,7 @@ namespace G_TicketPrinterService
             {
                 config = new PrinterConfiguration();
                 config.PrinterName = "UNSELECTED";
-                System.IO.File.WriteAllText("print_config.txt", JsonConvert.SerializeObject(config));
+                SaveConfigurationChanges(config);
             }
 
             return config;
