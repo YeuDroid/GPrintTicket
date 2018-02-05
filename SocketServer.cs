@@ -31,12 +31,12 @@ namespace G_TicketPrinterService
             while (true)
             {
                 rawJsonCatched = ScanForValue();
-                MessageBox.Show(rawJsonCatched);
-                goto FIN;
-
-                if (rawJsonCatched[0].ToString() == "NULL")
+                //MessageBox.Show(rawJsonCatched);
+                
+                if (rawJsonCatched == "NULL")
                 {
                     MessageBox.Show("NULL RECEIVER #123");
+                    continue;
                 }
                 if (rawJsonCatched[0].ToString() == "@")
                 {
@@ -49,8 +49,7 @@ namespace G_TicketPrinterService
                     printer.PrintTicket(dataTicket);
                     MessageBox.Show("TICKET: " + dataTicket.Identifiquer.ToString() + " IMPRESO");    
                 }
-                FIN:
-                ;
+                
             }
         }
         private String ScanForValue()

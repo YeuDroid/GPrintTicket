@@ -20,8 +20,8 @@ namespace G_TicketPrinterService
             new initialSplash().Show();
 
             //Start Server
-         //   SocketServer server = new SocketServer();
-           // server.Start();
+            SocketServer server = new SocketServer();
+            server.Start();
 
 
         }
