@@ -117,5 +117,13 @@ namespace G_TicketPrinterService
                 }
             }
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+             foreach(var a in PrinterModule.getPrinterInstalled())
+            {
+                MessageBox.Show(a);
+            }
+        }
     }
 }

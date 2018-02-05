@@ -32,10 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.NotifiBarIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.MenuOptionsBar = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.SelectPrinter = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.salirDelServidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verTicketsImpresosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aceraDeYeuDevelopLabsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verPantallaInicialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambiarImpresoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testModuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuOptionsBar.SuspendLayout();
             this.SuspendLayout();
@@ -56,12 +58,21 @@
             this.verTicketsImpresosToolStripMenuItem,
             this.aceraDeYeuDevelopLabsToolStripMenuItem,
             this.verPantallaInicialToolStripMenuItem,
+            this.cambiarImpresoraToolStripMenuItem,
             this.testModuleToolStripMenuItem});
             this.MenuOptionsBar.Name = "MenuOptionsBar";
-            this.MenuOptionsBar.Size = new System.Drawing.Size(216, 114);
+            this.MenuOptionsBar.Size = new System.Drawing.Size(216, 158);
+            this.MenuOptionsBar.Opening += new System.ComponentModel.CancelEventHandler(this.MenuOptionsBar_Opening);
+            // 
+            // SelectPrinter
+            // 
+            this.SelectPrinter.Name = "SelectPrinter";
+            this.SelectPrinter.Size = new System.Drawing.Size(61, 4);
+            this.SelectPrinter.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.SelectPrinter_ItemClicked);
             // 
             // salirDelServidorToolStripMenuItem
             // 
+            this.salirDelServidorToolStripMenuItem.Image = global::G_TicketPrinterService.Properties.Resources.rubber_duck_icon_icons_com_55299;
             this.salirDelServidorToolStripMenuItem.Name = "salirDelServidorToolStripMenuItem";
             this.salirDelServidorToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.salirDelServidorToolStripMenuItem.Text = "Salir del servidor";
@@ -69,6 +80,7 @@
             // 
             // verTicketsImpresosToolStripMenuItem
             // 
+            this.verTicketsImpresosToolStripMenuItem.Image = global::G_TicketPrinterService.Properties.Resources.Line_ui_icons_Svg_10_icon_icons_com_72171__1_;
             this.verTicketsImpresosToolStripMenuItem.Name = "verTicketsImpresosToolStripMenuItem";
             this.verTicketsImpresosToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.verTicketsImpresosToolStripMenuItem.Text = "Ver Tickets Impresos";
@@ -76,6 +88,7 @@
             // 
             // aceraDeYeuDevelopLabsToolStripMenuItem
             // 
+            this.aceraDeYeuDevelopLabsToolStripMenuItem.Image = global::G_TicketPrinterService.Properties.Resources.cashier_icon_icons_com_53629;
             this.aceraDeYeuDevelopLabsToolStripMenuItem.Name = "aceraDeYeuDevelopLabsToolStripMenuItem";
             this.aceraDeYeuDevelopLabsToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.aceraDeYeuDevelopLabsToolStripMenuItem.Text = "Acera de YeuDevelop Labs.";
@@ -83,13 +96,23 @@
             // 
             // verPantallaInicialToolStripMenuItem
             // 
+            this.verPantallaInicialToolStripMenuItem.Image = global::G_TicketPrinterService.Properties.Resources.shoppaymentorderbuy_11_icon_icons_com_73850;
             this.verPantallaInicialToolStripMenuItem.Name = "verPantallaInicialToolStripMenuItem";
             this.verPantallaInicialToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.verPantallaInicialToolStripMenuItem.Text = "Ver pantalla inicial";
             this.verPantallaInicialToolStripMenuItem.Click += new System.EventHandler(this.verPantallaInicialToolStripMenuItem_Click);
             // 
+            // cambiarImpresoraToolStripMenuItem
+            // 
+            this.cambiarImpresoraToolStripMenuItem.DropDown = this.SelectPrinter;
+            this.cambiarImpresoraToolStripMenuItem.Image = global::G_TicketPrinterService.Properties.Resources.printer_6029;
+            this.cambiarImpresoraToolStripMenuItem.Name = "cambiarImpresoraToolStripMenuItem";
+            this.cambiarImpresoraToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.cambiarImpresoraToolStripMenuItem.Text = "Cambiar Impresora";
+            // 
             // testModuleToolStripMenuItem
             // 
+            this.testModuleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("testModuleToolStripMenuItem.Image")));
             this.testModuleToolStripMenuItem.Name = "testModuleToolStripMenuItem";
             this.testModuleToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.testModuleToolStripMenuItem.Text = "TestModule";
@@ -122,6 +145,9 @@
         private System.Windows.Forms.ToolStripMenuItem aceraDeYeuDevelopLabsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verPantallaInicialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testModuleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambiarImpresoraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ContextMenuStrip SelectPrinter;
     }
 }
 

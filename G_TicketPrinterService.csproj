@@ -138,6 +138,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
@@ -157,6 +158,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\printer_6029.png" />
+    <None Include="Resources\Line_ui_icons_Svg-10_icon-icons.com_72171 %281%29.png" />
+    <None Include="Resources\rubber-duck_icon-icons.com_55299.png" />
+    <None Include="Resources\cashier_icon-icons.com_53629.png" />
+    <None Include="Resources\shoppaymentorderbuy-11_icon-icons.com_73850.png" />
+    <None Include="Resources\Alarm-Tick-icon.png" />
     <Content Include="rubber-duck_icon-icons.com_55299.ico" />
   </ItemGroup>
   <ItemGroup>

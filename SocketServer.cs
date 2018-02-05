@@ -47,7 +47,6 @@ namespace G_TicketPrinterService
                     var dataTicket = JsonConvert.DeserializeObject<Ticket>(rawJsonCatched);
                     PrinterModule printer = new PrinterModule();
                     printer.PrintTicket(dataTicket);
-                    MessageBox.Show("TICKET: " + dataTicket.Identifiquer.ToString() + " IMPRESO");    
                 }
                 
             }
