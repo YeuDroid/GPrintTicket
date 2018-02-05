@@ -20,8 +20,8 @@ namespace G_TicketPrinterService
         {
             var tik = new Ticket();
             tik.ItemsVendidos = new List<Ticket.ItemVendido>();
-            tik.ItemsVendidos.Add(new Ticket.ItemVendido("PESCADO",1,12));
-            tik.ItemsVendidos.Add(new Ticket.ItemVendido("POLLO", 2, 5));
+            tik.ItemsVendidos.Add(new Ticket.ItemVendido("Pescado",1,12));
+            tik.ItemsVendidos.Add(new Ticket.ItemVendido("Pollo", 2, 5));
 
             MessageBox.Show(tik.GetStringRawFromThis());
             temprawJson = tik.GetStringRawFromThis();
