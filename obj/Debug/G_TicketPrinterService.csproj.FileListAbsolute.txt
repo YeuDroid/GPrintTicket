@@ -15,4 +15,3 @@ C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinter
 C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\obj\Debug\PrinterService.exe
 C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\obj\Debug\PrinterService.pdb
 C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\bin\Debug\LibPrintTicket.dll
-C:\Users\a1100\Documents\Visual Studio 2017\Projects\MovibleVent\G_TicketPrinterService\obj\Debug\G_TicketPrinterService.acerca_de.resources
